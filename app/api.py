@@ -71,6 +71,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi.responses import RedirectResponse
+
+@app.get("/", include_in_schema=False)
+async def root():
+    """Redirect to the Swagger API documentation."""
+    return RedirectResponse(url="/docs")
+
 @app.get("/health", tags=["System"])
 async def health_check():
     """Check if the API and model are healthy."""
