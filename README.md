@@ -44,9 +44,6 @@ Raw Text → TextPreprocessor → TF-IDF / HuggingFace Embedder → Classifier �
 *(Note: Replace this placeholder with a screenshot of your `http://localhost:8000/docs` Swagger UI)*
 ![FastAPI Swagger UI Placeholder](https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png)
 
-### 3. MLflow Experiment Tracking
-*(Note: Replace this placeholder with a screenshot of your `http://localhost:5000` MLflow dashboard)*
-![MLflow Dashboard Placeholder](https://mlflow.org/docs/latest/_images/tracking-ui.png)
 
 ## 💻 How to Run Locally
 
