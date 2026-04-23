@@ -56,8 +56,8 @@ async def lifespan(app: FastAPI):
     ml_models.clear()
 
 app = FastAPI(
-    title="Fake News Detector API",
-    description="A production-ready NLP pipeline for fake news classification.",
+    title="Misinformation Classification API",
+    description="REST API for classifying news articles as Real or Fake using TF-IDF + HistGradientBoosting. Trained on the WELFake dataset (72K articles).",
     version="1.0.0",
     lifespan=lifespan
 )
