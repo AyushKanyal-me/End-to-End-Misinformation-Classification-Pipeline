@@ -343,7 +343,7 @@ def train_and_compare(model_keys=None):
         print(f"Classification Report — {name}")
         print(f"{'─' * 50}")
         print(classification_report(
-            y_test, r["y_pred"], target_names=["Fake", "Real"],
+            y_test, r["y_pred"], target_names=["Real", "Fake"],
         ))
 
     return all_results, best_name, best_pipeline, X_test, y_test

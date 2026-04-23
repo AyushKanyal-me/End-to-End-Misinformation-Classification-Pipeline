@@ -56,7 +56,7 @@ def save_classification_report(y_test, y_pred, best_name):
     os.makedirs(REPORTS_DIR, exist_ok=True)
 
     report = classification_report(
-        y_test, y_pred, target_names=["Fake", "Real"], digits=4
+        y_test, y_pred, target_names=["Real", "Fake"], digits=4
     )
 
     report_path = os.path.join(REPORTS_DIR, "classification_report.txt")

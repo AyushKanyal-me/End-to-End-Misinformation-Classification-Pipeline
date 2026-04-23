@@ -91,8 +91,8 @@ async def predict(request: PredictRequest):
     
     # Predict
     try:
-        prediction = pipeline.predict([request.text])[0]
-        label = "Real" if prediction == 1 else "Fake"
+        # WELFake dataset: label 0 = Real, label 1 = Fake
+        label = "Fake" if prediction == 1 else "Real"
         
         # Try to get confidence score
         try:

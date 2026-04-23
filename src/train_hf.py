@@ -93,7 +93,7 @@ def train_hf_model():
         print(f"  Time:       {train_time:.1f}s")
         print(f"  ✓ Saved to {model_path}")
 
-        print("\n" + classification_report(y_test, y_pred, target_names=["Fake", "Real"]))
+        print("\n" + classification_report(y_test, y_pred, target_names=["Real", "Fake"]))
 
 if __name__ == "__main__":
     train_hf_model()
