@@ -1,0 +1,11 @@
+Classification Report — Gradient Boosting
+=======================================================
+
+              precision    recall  f1-score   support
+
+        Fake     0.9821    0.9579    0.9699      7006
+        Real     0.9605    0.9833    0.9718      7302
+
+    accuracy                         0.9709     14308
+   macro avg     0.9713    0.9706    0.9708     14308
+weighted avg     0.9711    0.9709    0.9708     14308

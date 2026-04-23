@@ -1,0 +1,17 @@
+scikit-learn>=1.4
+pandas
+numpy
+nltk
+matplotlib
+seaborn
+joblib
+requests
+fastapi
+uvicorn
+pydantic
+mlflow
+pytest
+pytest-cov
+torch
+transformers
+sentence-transformers

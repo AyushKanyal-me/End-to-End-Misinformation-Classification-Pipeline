@@ -1,0 +1,45 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+
+# Data
+data/WELFake_Dataset.csv
+data/processed.pkl
+data/train_test_split.pkl
+
+# MLOps
+mlruns/
+.mlruns/
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
