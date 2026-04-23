@@ -34,17 +34,20 @@ A modular Machine Learning system that classifies news articles as **Real** or *
 | **ML Frameworks** | scikit-learn, SentenceTransformers (Hugging Face) |
 | **MLOps** | MLflow |
 | **API Backend** | FastAPI, Uvicorn, Pydantic |
-| **Deployment** | Docker, Hugging Face Spaces |
+| **Deployment** | Docker, Render (API), Hugging Face Spaces (UI) |
 | **Data & NLP** | Pandas, NumPy, NLTK |
 | **Testing & CI** | Pytest, GitHub Actions |
 
 ## 🏗️ Architecture
 
 ```
-Raw Text → TextPreprocessor → TF-IDF Vectorizer → Classifier → FastAPI / Gradio
-              (lowercase,        (50K features,      (HistGBM,      (REST API or
-              lemmatize,          unigrams +          97.1% F1)      Web UI)
-              remove noise)       bigrams)
+┌──────────────────┐       HTTP POST        ┌──────────────────────┐
+│  Hugging Face    │  ──────────────────►    │  Render (FastAPI)    │
+│  Spaces (Gradio) │  ◄──────────────────    │                      │
+│  [Frontend UI]   │       JSON response    │  TextPreprocessor    │
+└──────────────────┘                        │  → TF-IDF (50K feat) │
+                                            │  → HistGBM Classifier│
+                                            └──────────────────────┘
 ```
 
 ## 📸 Evaluation Visuals

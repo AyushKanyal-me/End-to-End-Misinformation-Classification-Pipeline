@@ -25,9 +25,12 @@ var/
 venv/
 ENV/
 
-# Data and Models
+# Data
 data/
-models/
+
+# Models (track only the deployed model)
+models/*
+!models/best_pipeline.joblib
 *.db
 *.sqlite3
 *.log

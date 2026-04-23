@@ -22,8 +22,8 @@ RUN python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet')
 # Copy the rest of the application code
 COPY . .
 
-# Expose port for FastAPI
+# Expose default port
 EXPOSE 8000
 
-# Run the FastAPI server using Uvicorn
-CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
+# Render sets $PORT dynamically; default to 8000 for local Docker usage
+CMD uvicorn app.api:app --host 0.0.0.0 --port ${PORT:-8000}
