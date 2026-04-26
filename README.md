@@ -42,8 +42,8 @@ A modular Machine Learning system that classifies news articles as **Real** or *
 
 ```
 ┌──────────────────┐       HTTP POST        ┌──────────────────────┐
-│  Hugging Face    │  ──────────────────►    │  Render (FastAPI)    │
-│  Spaces (Gradio) │  ◄──────────────────    │                      │
+│  Hugging Face    │  ──────────────────►   │  Render (FastAPI)    │
+│  Spaces (Gradio) │  ◄──────────────────   │                      │
 │  [Frontend UI]   │       JSON response    │  TextPreprocessor    │
 └──────────────────┘                        │  → TF-IDF (50K feat) │
                                             │  → HistGBM Classifier│
